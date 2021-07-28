@@ -57,18 +57,18 @@ public class MIDIKeyboard implements KeyListener{
 		// 4. if keyboardRowQtoP contains keyCode...
 		if (keyboardRowQtoP.contains(e.getKeyCode())) {
 			// 5. call playNote() with keyCode, keyboardRowQtoP, and piano as the arguments
-
+			playNote(keyCode, keyboardRowQtoP, piano);
 		}
 		// 9. if keyboardRowAtoL contains keyCode...
-
+		if (keyboardRowAtoL.contains(e.getKeyCode())) {
 			// 10. call playNote() with keyCode, keyboardRowAtoL, and piano as the arguments
-
-
+			playNote(keyCode, keyboardRowAtoL, piano);
+		}
 		// 13. if keyboardRowZtoM contains keyCode...
-
+		if (keyboardRowZtoM.contains(e.getKeyCode())) {
 			// 14. call playNote() with keyCode, keyboardRowZtoM, and drums as the arguments
-
-
+			playNote(keyCode, keyboardRowZtoM, drums);
+		}
 	}
 
 	@Override
@@ -77,20 +77,21 @@ public class MIDIKeyboard implements KeyListener{
 		lastKey = 0;
 		
 		// 6. if keyboardRowQtoP contains keyCode...
-
+		if (keyboardRowQtoP.contains(e.getKeyCode())) {
 			// 7. call stopNote() with keyCode, keyboardRowQtoP, and piano as the arguments
-
+			stopNote(keyCode, keyboardRowQtoP, piano);
+		}
 		// 8. Run your program. Does it play notes when you press a key between Q and P on your keyboard?
 		// 11. if keyboardRowAtoL contains keyCode...
-
+		if (keyboardRowAtoL.contains(e.getKeyCode())) {
 			// 12. call stopNote() with keyCode, keyboardRowAtoL, and piano as the arguments
-
-		
+			stopNote(keyCode, keyboardRowAtoL, piano);
+		}
 		// 15. if keyboardRowZtoM contains keyCode...
-
+		if (keyboardRowZtoM.contains(e.getKeyCode())) {
 			// 16. call stopNote() with keyCode, keyboardRowZtoM, and drums as the arguments
-
-		
+			stopNote(keyCode, keyboardRowZtoM, drums);
+		}
 		
 	}
 	
